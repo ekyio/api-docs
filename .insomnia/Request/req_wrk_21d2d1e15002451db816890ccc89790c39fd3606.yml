@@ -1,0 +1,21 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790c39fd3606
+authentication: {}
+body: {}
+created: 1592533788066
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1592533788066
+method: GET
+modified: 1592829293520
+name: Requests a stigmata mini image by its Id
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/stigmatas/{{ stigmataId }}/mini"

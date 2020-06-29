@@ -1,0 +1,30 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790c089ad275
+authentication: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "username",
+      "email": "example@example.com",
+      "password": "test123456"
+    }
+created: 1592533788466
+description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+isPrivate: false
+metaSortKey: -1592533788467
+method: POST
+modified: 1592829293998
+name: Adds a new weapon
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c5f014482
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/weapons"

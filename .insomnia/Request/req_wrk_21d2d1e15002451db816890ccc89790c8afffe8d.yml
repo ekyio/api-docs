@@ -1,0 +1,28 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790c8afffe8d
+authentication: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "key": "523f2da371277259c4a0fe57cdb812a7caf43132"
+    }
+created: 1592533788151
+description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+isPrivate: false
+metaSortKey: -1592533788151
+method: POST
+modified: 1592829293631
+name: Verifies email provided in the registration process
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/rest-auth/registration/verify-email"

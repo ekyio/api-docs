@@ -1,0 +1,950 @@
+_id: spc_fb7055efbe734b689d00309a80445f31
+contentType: yaml
+contents: >-
+  openapi: 3.0.0
+
+  info:
+    description: "A backend documentation file for Ekyio's Backend API."
+    version: 0.0.1
+    title: Ekyio's API
+    contact:
+      email: rpg.gruber@gmail.com
+  tags:
+    - name: user
+      description: User Auth-Related Endpoints
+      security:
+        - bearerAuth: []   
+    - name: valkyries
+      description: An endpoint to manage the core information about valkyries
+    - name: weapons
+      description: A list of weapons for Valkyries
+    - name: stigmatas
+      description: Stigmatas equipments for Valkyries
+    - name: builds
+      description: Endpoint for manipulating builds
+  paths:
+    /weapons:
+      get:
+        summary: Returns a list of weapons
+        tags:
+          - weapons
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      post:
+        summary: Adds a new weapon
+        tags:
+          - weapons
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /weapons/{weaponID}:
+      get:
+        summary: Get data from a specific weapon using its Id
+        tags:
+          - weapons
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      put:
+        summary: Updates a weapon information data
+        tags:
+          - weapons
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      delete:
+        summary: Removes a weapon from the database
+        tags:
+          - weapons
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /weapons/{weaponId}/mini:
+      get:
+        summary: Requests a weapon mini image by its Id
+        tags:
+          - weapons
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Adds/Replaces the mini weapon image
+        tags:
+          - weapons
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /weapons/{weaponId}/full:
+      get:
+        summary: Requests a weapon full image by its Id
+        tags:
+          - weapons
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Adds/Replaces the full weapon image
+        tags:
+          - weapons
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /valkyries/{valkId}:
+      get:
+        summary: Returns a specific valkyrie information
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /valkyries:
+      get:
+        summary: Returns a list of valkyries
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      post:
+        summary: Adds a new valkyrie
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /valkyries/{valkyId}:
+      put:
+        summary: Updates a Valkyrie basic information
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      delete:
+        summary: Removes a Valkyrie entry
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /valkyries/{valkyId}/card:
+      get:
+        summary: Requests a valkyries card image by its Id
+        tags:
+          - valkyries
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Add/Replaces main card image 
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: OK.
+    /valkyries/{valkyId}/portrait:
+      get:
+        summary: Requests a valkyries portrait image by its Id
+        tags:
+          - valkyries
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Adds/Replaces the valkyries portrait image
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /rest-auth/login:
+      post:
+        summary: Logs-in user
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /rest-auth/logout:
+      post:
+        summary: Logs-out user
+        tags:
+          - user
+        description: Logs-out user.
+        responses:
+          "200":
+            description: Successfuly logged out.
+    /rest-auth/password/reset:
+      post:
+        summary: Sends an email to reset users password
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Email"
+          description: Send a recovery email so the user can reset his password.
+          required: true
+        responses:
+          "200":
+            description: The reset email has been sent.
+    /rest-auth/password/reset/confirm:
+      post:
+        summary: Confirms the token received by user to validate email
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PasswordReset"
+          description: Use the token provided by the reset email to generate a new password.
+          required: true
+        responses:
+          "200":
+            description: Your password has been sucessfully updated.
+    /rest-auth/password/change:
+      post:
+        summary: Changes user password using his old credentials
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PasswordChange"
+          description: Change the user password within the API.
+          required: true
+        responses:
+          "200":
+            description: Your password has been sucessfully updated.
+    /rest-auth/registration:
+      post:
+        summary: Registers a new user into the database
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Registration"
+          description: User-Auth Registration endpoint.
+          required: true
+        responses:
+          "201":
+            description: Created. Returns the key/JWT value associated with your user.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /rest-auth/registration/verify-email:
+      post:
+        summary: Verifies email provided in the registration process
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Token"
+          description: Verify user account using token sent to his email address.
+          required: true
+        responses:
+          "200":
+            description: OK.
+    /rest-auth/user:
+      get: 
+        summary: Providers logged-in user data upon request
+        tags:
+          - user
+        description: User-Auth Registration endpoint.
+        required: true
+        responses:
+          "200":
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/UserDetails"
+          '401':
+            $ref: '#/components/responses/UnauthorizedError'
+    /stigmatas:
+      get:
+        summary: Returns a list of stigmatas
+        tags:
+          - stigmatas
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      post:
+        summary: Adds a new stigmata
+        tags:
+          - stigmatas
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /stigmatas/{stigmataId}:
+      get:
+        summary: Get data from a specific stigmata using its Id
+        tags:
+          - stigmatas
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      put:
+        summary: Updates a stigmata information data using its Id
+        tags:
+          - stigmatas
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      delete:
+        summary: Removes a stigmata from the database its Id
+        tags:
+          - stigmatas
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /stigmatas/{stigmataId}/mini:
+      get:
+        summary: Requests a stigmata mini image by its Id
+        tags:
+          - stigmatas
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Adds/Replaces the stigmata mini image
+        tags:
+          - stigmatas
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /stigmatas/{stigmataId}/full:
+      get:
+        summary: Requests a stigmata full image by its Id
+        tags:
+          - stigmatas
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Adds/Replaces the stigmata full image
+        tags:
+          - stigmatas
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /builds:
+      get:
+        summary: Returns a list of builds
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      post:
+        summary: Adds a new build
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /builds/{buildID}:
+      get:
+        summary: Get data from a specific build by its Id
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      put:
+        summary: Updates a build information
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      delete:
+        summary: Removes a build from the database
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /builds/{buildID}/rating:
+      get:
+        summary: Get data a rating from a specific build by its Id
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"              
+      post:
+        summary: Add a new rating to that specific build
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"  
+    /builds/{buildID}/rating/reset:              
+      post:
+        summary: Reset rating for a specific build by its Id
+        tags:
+          - builds
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"                  
+  servers:
+    - url: https://ekyio/api
+  components:
+    responses:
+      UnauthorizedError:
+        description: Access token is missing or invalid
+    securitySchemes:
+      bearerAuth:            # arbitrary name for the security scheme
+        type: http
+        scheme: bearer
+        bearerFormat: JWT    # optional, arbitrary value for documentation purposes
+        # use the same name as above
+    schemas:
+      User:
+        type: object
+        properties:
+          username:
+            type: string
+            example: username
+          email:
+            type: string
+            example: example@example.com
+          password:
+            type: string
+            example: test123456
+      Token:
+        type: object
+        properties:
+          key:
+            type: string
+            example: 523f2da371277259c4a0fe57cdb812a7caf43132
+      Email:
+        type: object
+        properties:
+          email:
+            type: string
+            example: example@example.com
+      valkId:
+        type: object
+        properties:
+          pid:
+            type: integer
+            example: 21
+      stigmataId:
+        type: object
+        properties:
+          pid:
+            type: integer
+            example: 21
+      weaponId:
+        type: object
+        properties:
+          pid:
+            type: integer
+            example: 21
+      PasswordReset:
+        type: object
+        properties:
+          uid:
+            type: string
+            example: Ee54e8t7t8egfa
+          token:
+            type: string
+            example: 523f2da371277259c4a0fe57cdb812a7caf43132
+          new_password1:
+            type: string
+            example: 123456
+          new_password2:
+            type: string
+            example: 123456
+      PasswordChange:
+        type: object
+        properties:
+          new_password1:
+            type: string
+            example: 222333444
+          new_password2:
+            type: string
+            example: 222333444
+          old_password:
+            type: string
+            example: 123456
+      Registration:
+        type: object
+        properties:
+          username:
+            type: string
+            example: test1234
+          password1:
+            type: string
+            example: typeanotherpassword
+          password2:
+            type: string
+            example: typeanotherpassword
+          email:
+            type: string
+            example: anotheremail@example.com
+      UserDetails:
+        type: object
+        properties:
+          email:
+            type: string
+            example: example.com
+          first_name:
+            type: string
+          last_name:
+            type: string
+          pk:
+            type: integer
+            example: 23
+          username:
+            type: string
+            example: test
+      Features:
+        type: string
+        enum:
+          - Heavy Attack
+          - Time Fracture
+          - Shield Break
+          - Airbone
+          - Charge
+          - Paralyze
+          - Slow
+          - Freeze
+          - Lightning
+          - Impaired
+          - Weaken
+          - Stun
+          - Ice
+          - Fire
+          - Ignite
+          - Bleed
+          - Knockback
+          - Attract
+      Tier:
+        type: string
+        enum:
+          - B
+          - A
+          - S
+      DamageType:
+        type: string
+        enum:
+          - Quantum
+          - Mecha
+          - Psy
+          - Biologic
+      BaseStats:
+        type: object
+        properties:
+          HP:
+            type: integer
+            format: int64
+          ATK:
+            type: integer
+            format: int64
+          CRT:
+            type: integer
+            format: int64
+          SP:
+            type: integer
+            format: int64
+          DEF:
+            type: integer
+            format: int64
+      Valkyrie:
+        type: object
+        required:
+          - longName
+          - shortName
+          - damageType
+          - features
+          - BaseTier
+          - BaseStats
+        properties:
+          id:
+            type: integer
+            format: int64
+          longName:
+            type: string
+          shortName:
+           type: string
+          damageType:
+            $ref: "#/components/schemas/DamageType"
+          features:
+            $ref: "#/components/schemas/Features"
+          BaseTier:
+            $ref: "#/components/schemas/Tier"
+          BaseStats:
+            $ref: "#/components/schemas/BaseStats"
+created: 1592350082772
+fileName: Ekyio's API 0.0.1
+modified: 1592829294181
+parentId: wrk_21d2d1e15002451db816890ccc89790c
+type: ApiSpec

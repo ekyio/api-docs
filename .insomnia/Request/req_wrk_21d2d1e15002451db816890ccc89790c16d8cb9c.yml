@@ -1,0 +1,30 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790c16d8cb9c
+authentication: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "username",
+      "email": "example@example.com",
+      "password": "test123456"
+    }
+created: 1592533788071
+description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+isPrivate: false
+metaSortKey: -1592533788071
+method: DELETE
+modified: 1592829293531
+name: Removes a stigmata from the database its Id
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/stigmatas/{{ stigmataId }}"

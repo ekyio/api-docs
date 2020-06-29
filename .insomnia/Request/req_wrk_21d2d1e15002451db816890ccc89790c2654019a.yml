@@ -1,0 +1,30 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790c2654019a
+authentication: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "username",
+      "email": "example@example.com",
+      "password": "test123456"
+    }
+created: 1592533788325
+description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+isPrivate: false
+metaSortKey: -1592533788325
+method: GET
+modified: 1592829293850
+name: Returns a list of valkyries
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/valkyries"

@@ -1,0 +1,10 @@
+_id: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
+created: 1592501822654
+description: An endpoint to manage the core information about valkyries
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1592533788533
+modified: 1592829294104
+name: valkyries
+parentId: wrk_21d2d1e15002451db816890ccc89790c
+type: RequestGroup

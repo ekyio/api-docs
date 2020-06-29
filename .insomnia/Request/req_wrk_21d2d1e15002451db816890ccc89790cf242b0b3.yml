@@ -1,0 +1,30 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790cf242b0b3
+authentication: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "username",
+      "email": "example@example.com",
+      "password": "test123456"
+    }
+created: 1592533787990
+description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+isPrivate: false
+metaSortKey: -1592533787990
+method: POST
+modified: 1592829293400
+name: Reset rating for a specific build by its Id
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/builds/{{ buildID }}/rating/reset"

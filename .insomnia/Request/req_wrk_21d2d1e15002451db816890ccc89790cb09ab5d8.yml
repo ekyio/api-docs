@@ -1,0 +1,22 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790cb09ab5d8
+authentication: {}
+body:
+  mimeType: image/*
+created: 1592533788263
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1592533788263
+method: POST
+modified: 1592829293778
+name: Add/Replaces main card image
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/valkyries/{{ valkyId }}/card"

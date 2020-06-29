@@ -1,0 +1,30 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790c19650149
+authentication: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "username": "username",
+      "email": "example@example.com",
+      "password": "test123456"
+    }
+created: 1592533788025
+description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+isPrivate: false
+metaSortKey: -1592533788025
+method: GET
+modified: 1592829293456
+name: Get data from a specific build by its Id
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/builds/{{ buildID }}"

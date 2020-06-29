@@ -1,0 +1,31 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790cd1d69b79
+authentication: {}
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "uid": "Ee54e8t7t8egfa",
+      "token": "523f2da371277259c4a0fe57cdb812a7caf43132",
+      "new_password1": 123456,
+      "new_password2": 123456
+    }
+created: 1592360762386
+description: ""
+headers:
+  - name: Content-Type
+    value: application/json
+isPrivate: false
+metaSortKey: -1592360762386
+method: POST
+modified: 1592501822617
+name: Confirms the token received by user to validate email
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/rest-auth/password/reset/confirm/"

@@ -1,0 +1,10 @@
+_id: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec
+created: 1592533788508
+description: Stigmatas equipments for Valkyries
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1592501822644.5
+modified: 1592829294057
+name: stigmatas
+parentId: wrk_21d2d1e15002451db816890ccc89790c
+type: RequestGroup
