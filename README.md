@@ -21,7 +21,7 @@
   </p>
 </p>
 
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[![Insomnia][insomnia-badge]][insomnia-url] [![gitlab][gitlab-badge]][gitlab-url] [![discord][discord-badge]][discord-url]
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[![Insomnia][insomnia-badge]][insomnia-url] [![gitlab][gitlab-badge]][gitlab-url] [![discord][discord-badge]][discord-url]
 
 
 
