@@ -23,6 +23,9 @@ contents: >-
     - name: builds
       description: Endpoint for manipulating builds
   paths:
+    ###################
+    ## AUTH
+    ###################
     /rest-auth/login/:
       post:
         summary: Logs-in user
@@ -145,6 +148,161 @@ contents: >-
                   $ref: "#/components/schemas/UserDetails"
           '401':
             $ref: '#/components/responses/UnauthorizedError'
+    
+    ###################
+    ## VALKYRIES
+    ###################
+    /valkyries/:
+      get:
+        summary: Returns a list of valkyries
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      post:
+        summary: Adds a new valkyrie
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /valkyries/{valkId}/:
+      get:
+        summary: Returns a specific valkyrie information
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      put:
+        summary: Updates a Valkyrie basic information
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+      delete:
+        summary: Removes a Valkyrie entry
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /valkyries/{valkyId}/card/:
+      get:
+        summary: Requests a valkyries card image by its Id
+        tags:
+          - valkyries
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Add/Replaces main card image 
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: OK.
+    /valkyries/{valkyId}/portrait/:
+      get:
+        summary: Requests a valkyries portrait image by its Id
+        tags:
+          - valkyries
+        responses:
+          "200":
+            description: OK.
+          content:
+            image/*:    # Can be image/png, image/svg, image/gif, etc.
+              schema:
+                type: string
+                format: binary
+      post:
+        summary: Adds/Replaces the valkyries portrait image
+        tags:
+          - valkyries
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
     /weapons:
       get:
         summary: Returns a list of weapons
@@ -299,158 +457,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /valkyries/{valkId}:
-      get:
-        summary: Returns a specific valkyrie information
-        tags:
-          - valkyries
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: User logged-in, returns a JWT key.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
-    /valkyries:
-      get:
-        summary: Returns a list of valkyries
-        tags:
-          - valkyries
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: User logged-in, returns a JWT key.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
-      post:
-        summary: Adds a new valkyrie
-        tags:
-          - valkyries
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: User logged-in, returns a JWT key.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
-    /valkyries/{valkyId}:
-      put:
-        summary: Updates a Valkyrie basic information
-        tags:
-          - valkyries
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: User logged-in, returns a JWT key.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
-      delete:
-        summary: Removes a Valkyrie entry
-        tags:
-          - valkyries
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: User logged-in, returns a JWT key.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
-    /valkyries/{valkyId}/card:
-      get:
-        summary: Requests a valkyries card image by its Id
-        tags:
-          - valkyries
-        responses:
-          "200":
-            description: OK.
-          content:
-            image/*:    # Can be image/png, image/svg, image/gif, etc.
-              schema:
-                type: string
-                format: binary
-      post:
-        summary: Add/Replaces main card image 
-        tags:
-          - valkyries
-        requestBody:
-          content:
-            image/*:    # Can be image/png, image/svg, image/gif, etc.
-              schema:
-                type: string
-                format: binary
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: OK.
-    /valkyries/{valkyId}/portrait:
-      get:
-        summary: Requests a valkyries portrait image by its Id
-        tags:
-          - valkyries
-        responses:
-          "200":
-            description: OK.
-          content:
-            image/*:    # Can be image/png, image/svg, image/gif, etc.
-              schema:
-                type: string
-                format: binary
-      post:
-        summary: Adds/Replaces the valkyries portrait image
-        tags:
-          - valkyries
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: User logged-in, returns a JWT key.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
+    
     /stigmatas:
       get:
         summary: Returns a list of stigmatas
@@ -945,6 +952,6 @@ contents: >-
             $ref: "#/components/schemas/BaseStats"
 created: 1592350082772
 fileName: Ekyio's API 0.0.1
-modified: 1593706459067
+modified: 1593710546692
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec
