@@ -11,13 +11,13 @@ body:
 created: 1593718348721
 description: ""
 headers:
-  - id: pair_5c99667181804c50846951740bad7210
+  - id: pair_d6cb7fcd9ffc4f72864ec78ee033ffd2
     name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593718348721
+metaSortKey: -1000000000
 method: POST
-modified: 1593718785150
+modified: 1593718965155
 name: Logs-in user
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f
@@ -28,4 +28,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: http://ekyio.com/api/rest-auth/login/
+url: "{{ host }}/api/rest-auth/login/"

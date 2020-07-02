@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1593718348670
 method: GET
-modified: 1593718610635
+modified: 1593718925016
 name: Requests a stigmata full image by its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec
