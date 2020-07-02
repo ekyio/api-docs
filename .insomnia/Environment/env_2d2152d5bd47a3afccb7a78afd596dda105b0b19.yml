@@ -3,10 +3,16 @@ color: null
 created: 1592350082814
 data:
   base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
-dataPropertyOrder: null
+dataPropertyOrder:
+  "&":
+    - base_path
+    - bearerToken
+    - host
+    - scheme
+    - base_url
 isPrivate: false
 metaSortKey: 1592350082814
-modified: 1593718348732
+modified: 1593718610850
 name: Base environment
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: Environment

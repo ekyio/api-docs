@@ -16,7 +16,7 @@ headers:
 isPrivate: false
 metaSortKey: -1593718348658
 method: GET
-modified: 1593718348658
+modified: 1593718610614
 name: Get data a rating from a specific build by its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c
