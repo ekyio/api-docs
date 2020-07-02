@@ -244,10 +244,10 @@ contents: >-
           - valkyries
         responses:
           "200":
-            description: OK.
-          content:
-            image/*:    # Can be image/png, image/svg, image/gif, etc.
-              schema:
+            description: Returns the image file associated to that Valkyrie ID
+          content:    # Can be image/png, image/svg, image/gif, etc.
+            schema:
+              image/*:
                 type: string
                 format: binary
       post:
@@ -260,7 +260,7 @@ contents: >-
               schema:
                 type: string
                 format: binary
-          description: Username and password
+          description: Needs to be a valid .png or .jpeg
           required: true
         responses:
           "200":
@@ -954,6 +954,6 @@ contents: >-
             $ref: "#/components/schemas/BaseStats"
 created: 1592350082772
 fileName: Ekyio's API 0.0.1
-modified: 1593711568645
+modified: 1593711905274
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec
