@@ -1,12 +1,8 @@
 pages:
   image: node:14
-  stage: deploy
   script:
     - npm i -g insomnia-documenter
-    - insomnia-documenter --config specs.json 
-    - mkdir .result
-    - cp -r * .result
-    - mv .result public
+    - insomnia-documenter --config specs.json --output public
   artifacts:
     paths:
       - public
