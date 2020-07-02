@@ -3,6 +3,7 @@ pages:
   stage: deploy
   script:
     - npm i -g insomnia-documenter
+    - mkdir public
     - insomnia-documenter --config spec.json --output public/
   artifacts:
     paths:

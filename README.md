@@ -10,14 +10,14 @@
   <p align="center">
     A Honkai Impact 3rd Fan-made Website!
     <br />
-    <a href="https://ekyio.com/docs/api/"><strong>Explore the documentation »</strong></a>
+    <a href="https://api.ekyio.com"><strong>Explore the documentation »</strong></a>
     <br />
     <br />
     <a href="https://github.com/ekyio/frontend-client/">Frontend</a>
     ·
     <a href="https://github.com/ekyio/backend">Backend</a>
     ·
-    <a href="ekyio.com/docs/design/">Design System</a>
+    <a href="https://design.ekyio.com">Design System</a>
   </p>
 </p>
 
@@ -44,7 +44,7 @@ Distributed under the Apache 2.0 License. See `LICENSE` for more information.
 [insomnia-badge]: https://insomnia.rest/images/run.svg
 [insomnia-url]: https://insomnia.rest/run/?label=Ekyio%20API&uri=https%3A%2F%2Fgitlab.com%2Fvilanify%2Fapi-docs-ekyio%2F-%2Fblob%2Fmaster%2Fspecs.json
 [gitlab-badge]: https://img.shields.io/badge/documentation-online?style=for-the-badge&logo=gitlab&color=6a57d5
-[gitlab-url]: https://vilanify.gitlab.io/api-docs-ekyio/
+[gitlab-url]: https://api.ekyio.com
 [discord-badge]: https://img.shields.io/discord/710935539154550866?color=purple&label=Discord&logo=discord&logoColor=white&style=for-the-badge
 [discord-url]: https://discord.gg/Xz9yFyk
 [website-url]: https://ekyio.com
