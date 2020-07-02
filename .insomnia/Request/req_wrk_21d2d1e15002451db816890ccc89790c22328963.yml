@@ -8,15 +8,15 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1592533788011
+created: 1593713423027
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592533788011
+metaSortKey: -1593713423027
 method: DELETE
-modified: 1593652429939
+modified: 1593713423027
 name: Removes a build from the database
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c

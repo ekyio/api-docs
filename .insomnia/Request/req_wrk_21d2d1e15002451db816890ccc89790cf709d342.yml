@@ -8,15 +8,15 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1592533788104
+created: 1593713423044
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592533788104
+metaSortKey: -1593713423044
 method: POST
-modified: 1593652430031
+modified: 1593713423044
 name: Adds a new stigmata
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec

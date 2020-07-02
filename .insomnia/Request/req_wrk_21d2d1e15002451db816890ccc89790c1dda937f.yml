@@ -4,19 +4,19 @@ body:
   mimeType: application/json
   text: |-
     {
-      "username": "username",
-      "email": "example@example.com",
-      "password": "test123456"
+      "username": "test",
+      "password": "123456"
     }
-created: 1592360762411
+created: 1593713423107
 description: ""
 headers:
-  - name: Content-Type
+  - id: pair_b080dabc32534480b9e6104b0ed2efeb
+    name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592360762411
+metaSortKey: -1593713423107
 method: POST
-modified: 1592501822635
+modified: 1593713447274
 name: Logs-in user
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f

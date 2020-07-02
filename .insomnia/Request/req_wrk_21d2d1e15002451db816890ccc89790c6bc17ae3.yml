@@ -1,4 +1,4 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790c017900bc
+_id: req_wrk_21d2d1e15002451db816890ccc89790c6bc17ae3
 authentication: {}
 body:
   mimeType: application/json
@@ -8,15 +8,15 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1592533788234
+created: 1593713423064
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592533788234
+metaSortKey: -1593713423064
 method: POST
-modified: 1593652430152
+modified: 1593713423064
 name: Adds/Replaces the valkyries portrait image
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
@@ -27,4 +27,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/valkyries/{{ valkyId }}/portrait"
+url: "{{ base_url }}/valkyries/{{ valkyId }}/portrait/"
