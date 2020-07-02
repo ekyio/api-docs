@@ -1,10 +1,10 @@
 _id: fld_wrk_21d2d1e15002451db816890ccc89790c5f014482
-created: 1593713423188
+created: 1593718348726
 description: A list of weapons for Valkyries
 environment: {}
 environmentPropertyOrder: null
-metaSortKey: -1593713423188
-modified: 1593713641383
+metaSortKey: -1593718348726
+modified: 1593718348726
 name: weapons
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: RequestGroup

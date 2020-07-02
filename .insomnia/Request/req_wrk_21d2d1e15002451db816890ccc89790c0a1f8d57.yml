@@ -1,4 +1,4 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790c556fc384
+_id: req_wrk_21d2d1e15002451db816890ccc89790c0a1f8d57
 authentication: {}
 body:
   mimeType: application/json
@@ -8,18 +8,18 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1593713423043
+created: 1593718348660
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593713423043
-method: GET
-modified: 1593713641325
-name: Get data from a specific stigmata using its Id
+metaSortKey: -1593718348660
+method: DELETE
+modified: 1593718348660
+name: Removes a build from the database
 parameters: []
-parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c
 settingDisableRenderRequestBody: false
 settingEncodeUrl: true
 settingFollowRedirects: global
@@ -27,4 +27,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/stigmatas/{{ stigmataId }}"
+url: "{{ base_url }}/builds/{{ buildID }}/"

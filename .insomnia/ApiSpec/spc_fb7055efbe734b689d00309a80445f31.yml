@@ -22,6 +22,8 @@ contents: >-
       description: Stigmatas equipments for Valkyries
     - name: builds
       description: Endpoint for manipulating builds
+  servers:
+    - url: https://ekyio.com/api/
   paths:
     ###################
     ## AUTH
@@ -451,7 +453,7 @@ contents: >-
                 schema:
                   $ref: "#/components/schemas/Token"
     
-    /stigmatas:
+    /stigmatas/:
       get:
         summary: Returns a list of stigmatas
         tags:
@@ -488,7 +490,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /stigmatas/{stigmataId}:
+    /stigmatas/{stigmataId}/:
       get:
         summary: Get data from a specific stigmata using its Id
         tags:
@@ -543,7 +545,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /stigmatas/{stigmataId}/mini:
+    /stigmatas/{stigmataId}/mini/:
       get:
         summary: Requests a stigmata mini image by its Id
         tags:
@@ -574,7 +576,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /stigmatas/{stigmataId}/full:
+    /stigmatas/{stigmataId}/full/:
       get:
         summary: Requests a stigmata full image by its Id
         tags:
@@ -605,7 +607,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /builds:
+    /builds/:
       get:
         summary: Returns a list of builds
         tags:
@@ -642,7 +644,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /builds/{buildID}:
+    /builds/{buildID}/:
       get:
         summary: Get data from a specific build by its Id
         tags:
@@ -697,7 +699,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /builds/{buildID}/rating:
+    /builds/{buildID}/rating/:
       get:
         summary: Get data a rating from a specific build by its Id
         tags:
@@ -734,7 +736,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"  
-    /builds/{buildID}/rating/reset:              
+    /builds/{buildID}/rating/reset/:              
       post:
         summary: Reset rating for a specific build by its Id
         tags:
@@ -752,9 +754,7 @@ contents: >-
             content:
               application/json:
                 schema:
-                  $ref: "#/components/schemas/Token"                  
-  servers:
-    - url: https://ekyio.com/api/
+                  $ref: "#/components/schemas/Token"      
   components:
     responses:
       UnauthorizedError:
@@ -954,6 +954,6 @@ contents: >-
             $ref: "#/components/schemas/BaseStats"
 created: 1592350082772
 fileName: Ekyio's API 0.0.1
-modified: 1593713641394
+modified: 1593718348736
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec

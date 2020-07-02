@@ -1,4 +1,4 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790cbce1f33d
+_id: req_wrk_21d2d1e15002451db816890ccc89790c12034dcf
 authentication: {}
 body:
   mimeType: application/json
@@ -8,16 +8,16 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1593713423031
+created: 1593718348666
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593713423031
-method: POST
-modified: 1593713641309
-name: Adds a new build
+metaSortKey: -1593718348666
+method: GET
+modified: 1593718348666
+name: Returns a list of builds
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c
 settingDisableRenderRequestBody: false
@@ -27,4 +27,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/builds"
+url: "{{ base_url }}/builds/"

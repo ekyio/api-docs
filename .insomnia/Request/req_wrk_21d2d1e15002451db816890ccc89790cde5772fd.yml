@@ -1,4 +1,4 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790c718b29f1
+_id: req_wrk_21d2d1e15002451db816890ccc89790cde5772fd
 authentication: {}
 body:
   mimeType: application/json
@@ -8,18 +8,18 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1593713423028
+created: 1593718348668
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593713423028
-method: PUT
-modified: 1593713641307
-name: Updates a build information
+metaSortKey: -1593718348668
+method: POST
+modified: 1593718348668
+name: Adds/Replaces the stigmata full image
 parameters: []
-parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec
 settingDisableRenderRequestBody: false
 settingEncodeUrl: true
 settingFollowRedirects: global
@@ -27,4 +27,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/builds/{{ buildID }}"
+url: "{{ base_url }}/stigmatas/{{ stigmataId }}/full/"

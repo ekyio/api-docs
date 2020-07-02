@@ -3,7 +3,6 @@ color: null
 created: 1592350184555
 data:
   base_path: /api
-  base_url: "{{ scheme }}://{{ host }}{{ base_path }}"
   bearerToken: bearerToken
   host: ekyio.com
   scheme: https
@@ -16,7 +15,7 @@ dataPropertyOrder:
     - base_url
 isPrivate: false
 metaSortKey: 1592350184555
-modified: 1593713669902
+modified: 1593718348731
 name: OpenAPI env
 parentId: env_2d2152d5bd47a3afccb7a78afd596dda105b0b19
 type: Environment

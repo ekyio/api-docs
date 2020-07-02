@@ -6,15 +6,15 @@ body:
     {
       "key": "523f2da371277259c4a0fe57cdb812a7caf43132"
     }
-created: 1593713423091
+created: 1593718348710
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593713423091
+metaSortKey: -1593718348710
 method: POST
-modified: 1593713641365
+modified: 1593718348710
 name: Verifies email provided in the registration process
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f

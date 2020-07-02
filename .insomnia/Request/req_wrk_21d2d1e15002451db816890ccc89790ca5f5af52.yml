@@ -1,14 +1,14 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790c39fd3606
+_id: req_wrk_21d2d1e15002451db816890ccc89790ca5f5af52
 authentication: {}
 body: {}
-created: 1593713423039
+created: 1593718348670
 description: ""
 headers: []
 isPrivate: false
-metaSortKey: -1593713423039
+metaSortKey: -1593718348670
 method: GET
-modified: 1593713641318
-name: Requests a stigmata mini image by its Id
+modified: 1593718348670
+name: Requests a stigmata full image by its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec
 settingDisableRenderRequestBody: false
@@ -18,4 +18,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/stigmatas/{{ stigmataId }}/mini"
+url: "{{ base_url }}/stigmatas/{{ stigmataId }}/full/"

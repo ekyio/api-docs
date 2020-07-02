@@ -8,15 +8,15 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1593713423057
+created: 1593718348691
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593713423057
+metaSortKey: -1593718348691
 method: GET
-modified: 1593713641341
+modified: 1593718348691
 name: Get data from a specific weapon using its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c5f014482
