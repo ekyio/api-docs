@@ -4,22 +4,23 @@ body:
   mimeType: application/json
   text: |-
     {
-      "username": "test",
-      "password": "123456"
+      "username": "username",
+      "email": "example@example.com",
+      "password": "test123456"
     }
 created: 1593713423107
 description: ""
 headers:
-  - id: pair_b080dabc32534480b9e6104b0ed2efeb
+  - id: pair_a1892d346c5c4d03a1bd1dc1825ef2b2
     name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593713423107
+metaSortKey: -1000000000
 method: POST
-modified: 1593713447274
+modified: 1593713879205
 name: Logs-in user
 parameters: []
-parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f
+parentId: wrk_37cfff76709e49e885e7afc7c79a093f
 settingDisableRenderRequestBody: false
 settingEncodeUrl: true
 settingFollowRedirects: global

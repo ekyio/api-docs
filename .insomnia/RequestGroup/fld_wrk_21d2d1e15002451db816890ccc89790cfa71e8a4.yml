@@ -4,7 +4,7 @@ description: An endpoint to manage the core information about valkyries
 environment: {}
 environmentPropertyOrder: null
 metaSortKey: -1593713423202
-modified: 1593713423202
+modified: 1593713641384
 name: valkyries
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: RequestGroup
