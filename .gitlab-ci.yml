@@ -4,6 +4,7 @@ pages:
   script:
     - npm i -g insomnia-documenter
     - insomnia-documenter --config specs.json 
+    - mkdir .result
     - cp -r * .result
     - cd ..
     - ls
