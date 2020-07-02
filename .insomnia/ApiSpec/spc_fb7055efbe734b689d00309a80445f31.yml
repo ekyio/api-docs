@@ -96,7 +96,7 @@ contents: >-
         responses:
           "200":
             description: Your password has been sucessfully updated.
-    /rest-auth/registration:
+    /rest-auth/registration/:
       post:
         summary: Registers a new user into the database
         tags:
@@ -115,7 +115,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /rest-auth/registration/verify-email:
+    /rest-auth/registration/verify-email/:
       post:
         summary: Verifies email provided in the registration process
         tags:
@@ -130,7 +130,7 @@ contents: >-
         responses:
           "200":
             description: OK.
-    /rest-auth/user:
+    /rest-auth/user/:
       get: 
         summary: Providers logged-in user data upon request
         tags:
@@ -945,6 +945,6 @@ contents: >-
             $ref: "#/components/schemas/BaseStats"
 created: 1592350082772
 fileName: Ekyio's API 0.0.1
-modified: 1593662744278
+modified: 1593706459067
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec
