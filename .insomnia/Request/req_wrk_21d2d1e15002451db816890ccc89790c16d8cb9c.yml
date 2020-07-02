@@ -16,7 +16,7 @@ headers:
 isPrivate: false
 metaSortKey: -1592533788071
 method: DELETE
-modified: 1592829293531
+modified: 1593652430001
 name: Removes a stigmata from the database its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec

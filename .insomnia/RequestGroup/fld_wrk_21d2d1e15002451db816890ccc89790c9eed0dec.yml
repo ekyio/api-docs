@@ -4,7 +4,7 @@ description: Stigmatas equipments for Valkyries
 environment: {}
 environmentPropertyOrder: null
 metaSortKey: -1592501822644.5
-modified: 1592829294057
+modified: 1593652430371
 name: stigmatas
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: RequestGroup

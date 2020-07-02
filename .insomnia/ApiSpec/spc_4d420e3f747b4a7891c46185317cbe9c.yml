@@ -1,4 +1,4 @@
-_id: spc_fb7055efbe734b689d00309a80445f31
+_id: spc_4d420e3f747b4a7891c46185317cbe9c
 contentType: yaml
 contents: >-
   openapi: 3.0.0
@@ -329,7 +329,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /rest-auth/login:
+    /rest-auth/login/:
       post:
         summary: Logs-in user
         tags:
@@ -754,7 +754,7 @@ contents: >-
                 schema:
                   $ref: "#/components/schemas/Token"                  
   servers:
-    - url: https://ekyio/api
+    - url: https://ekyio.com/api/
   components:
     responses:
       UnauthorizedError:
@@ -943,8 +943,8 @@ contents: >-
             $ref: "#/components/schemas/Tier"
           BaseStats:
             $ref: "#/components/schemas/BaseStats"
-created: 1592350082772
+created: 1593637562004
 fileName: Ekyio's API 0.0.1
-modified: 1593652430449
+modified: 1593652457213
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec

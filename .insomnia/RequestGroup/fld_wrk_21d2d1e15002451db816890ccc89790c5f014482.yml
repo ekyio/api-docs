@@ -4,7 +4,7 @@ description: A list of weapons for Valkyries
 environment: {}
 environmentPropertyOrder: null
 metaSortKey: -1592501822647
-modified: 1592829294087
+modified: 1593652430381
 name: weapons
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: RequestGroup

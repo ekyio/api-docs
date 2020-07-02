@@ -16,7 +16,7 @@ headers:
 isPrivate: false
 metaSortKey: -1592533787990
 method: POST
-modified: 1592829293400
+modified: 1593652429917
 name: Reset rating for a specific build by its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c3b6faa5c

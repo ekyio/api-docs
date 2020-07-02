@@ -17,7 +17,7 @@ headers:
 isPrivate: false
 metaSortKey: -1592533788163
 method: POST
-modified: 1592829293650
+modified: 1593652430078
 name: Registers a new user into the database
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f

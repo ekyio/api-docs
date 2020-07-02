@@ -7,7 +7,7 @@ headers: []
 isPrivate: false
 metaSortKey: -1592533788359
 method: GET
-modified: 1592829293900
+modified: 1593652430280
 name: Requests a weapon full image by its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c5f014482
