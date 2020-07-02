@@ -96,7 +96,7 @@ contents: >-
         responses:
           "200":
             description: Your password has been sucessfully updated.
-    /rest-auth/registration:
+    /rest-auth/registration/:
       post:
         summary: Registers a new user into the database
         tags:
@@ -115,7 +115,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /rest-auth/registration/verify-email:
+    /rest-auth/registration/verify-email/:
       post:
         summary: Verifies email provided in the registration process
         tags:
@@ -130,7 +130,7 @@ contents: >-
         responses:
           "200":
             description: OK.
-    /rest-auth/user:
+    /rest-auth/user/:
       get: 
         summary: Providers logged-in user data upon request
         tags:
@@ -145,7 +145,7 @@ contents: >-
                   $ref: "#/components/schemas/UserDetails"
           '401':
             $ref: '#/components/responses/UnauthorizedError'
-    /weapons:
+    /weapons/:
       get:
         summary: Returns a list of weapons
         tags:
@@ -182,7 +182,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /weapons/{weaponID}:
+    /weapons/{weaponID}/:
       get:
         summary: Get data from a specific weapon using its Id
         tags:
@@ -237,7 +237,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /weapons/{weaponId}/mini:
+    /weapons/{weaponId}/mini/:
       get:
         summary: Requests a weapon mini image by its Id
         tags:
@@ -268,7 +268,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /weapons/{weaponId}/full:
+    /weapons/{weaponId}/full/:
       get:
         summary: Requests a weapon full image by its Id
         tags:
@@ -299,7 +299,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /valkyries/{valkId}:
+    /valkyries/{valkId}/:
       get:
         summary: Returns a specific valkyrie information
         tags:
@@ -318,7 +318,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /valkyries:
+    /valkyries/:
       get:
         summary: Returns a list of valkyries
         tags:
@@ -355,7 +355,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /valkyries/{valkyId}:
+    /valkyries/{valkyId}/:
       put:
         summary: Updates a Valkyrie basic information
         tags:
@@ -392,7 +392,7 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /valkyries/{valkyId}/card:
+    /valkyries/{valkyId}/card/:
       get:
         summary: Requests a valkyries card image by its Id
         tags:
@@ -420,7 +420,7 @@ contents: >-
         responses:
           "200":
             description: OK.
-    /valkyries/{valkyId}/portrait:
+    /valkyries/{valkyId}/portrait/:
       get:
         summary: Requests a valkyries portrait image by its Id
         tags:
@@ -945,6 +945,6 @@ contents: >-
             $ref: "#/components/schemas/BaseStats"
 created: 1593637562004
 fileName: Ekyio's API 0.0.1
-modified: 1593661254872
+modified: 1593663271634
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec
