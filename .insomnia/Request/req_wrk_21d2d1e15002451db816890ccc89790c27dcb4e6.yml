@@ -1,0 +1,21 @@
+_id: req_wrk_21d2d1e15002451db816890ccc89790c27dcb4e6
+authentication: {}
+body: {}
+created: 1593713423076
+description: ""
+headers: []
+isPrivate: false
+metaSortKey: -1593713423076
+method: GET
+modified: 1593713423076
+name: Requests a valkyries card image by its Id
+parameters: []
+parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingFollowRedirects: global
+settingRebuildPath: true
+settingSendCookies: true
+settingStoreCookies: true
+type: Request
+url: "{{ base_url }}/valkyries/{{ valkyId }}/card/"

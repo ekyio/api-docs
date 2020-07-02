@@ -8,15 +8,15 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1593662743876
+created: 1593713423046
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593662743876
+metaSortKey: -1593713423046
 method: GET
-modified: 1593662743876
+modified: 1593713423046
 name: Returns a list of stigmatas
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c9eed0dec

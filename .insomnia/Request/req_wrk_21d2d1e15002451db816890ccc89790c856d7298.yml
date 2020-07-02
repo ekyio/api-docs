@@ -1,15 +1,14 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790cb09ab5d8
+_id: req_wrk_21d2d1e15002451db816890ccc89790c856d7298
 authentication: {}
-body:
-  mimeType: image/*
-created: 1593662743904
+body: {}
+created: 1593713423087
 description: ""
 headers: []
 isPrivate: false
-metaSortKey: -1593662743904
-method: POST
-modified: 1593662743904
-name: Add/Replaces main card image
+metaSortKey: -1593713423087
+method: GET
+modified: 1593713423087
+name: Returns a list of valkyries
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
 settingDisableRenderRequestBody: false
@@ -19,4 +18,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/valkyries/{{ valkyId }}/card"
+url: "{{ base_url }}/valkyries/"

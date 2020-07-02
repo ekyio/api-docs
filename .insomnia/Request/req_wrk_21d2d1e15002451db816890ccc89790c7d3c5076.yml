@@ -1,13 +1,13 @@
 _id: req_wrk_21d2d1e15002451db816890ccc89790c7d3c5076
 authentication: {}
 body: {}
-created: 1593662743983
+created: 1593713423048
 description: ""
 headers: []
 isPrivate: false
-metaSortKey: -1593662743983
+metaSortKey: -1593713423048
 method: GET
-modified: 1593662743983
+modified: 1593713423048
 name: Requests a weapon full image by its Id
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c5f014482

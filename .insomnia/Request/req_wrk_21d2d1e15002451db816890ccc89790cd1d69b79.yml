@@ -9,15 +9,15 @@ body:
       "new_password1": 123456,
       "new_password2": 123456
     }
-created: 1593662744106
+created: 1593713423100
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593662744106
+metaSortKey: -1593713423100
 method: POST
-modified: 1593662744106
+modified: 1593713423100
 name: Confirms the token received by user to validate email
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f

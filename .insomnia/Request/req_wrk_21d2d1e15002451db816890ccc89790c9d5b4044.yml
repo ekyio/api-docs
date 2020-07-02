@@ -1,22 +1,32 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790cb929920e
+_id: req_wrk_21d2d1e15002451db816890ccc89790c9d5b4044
 authentication: {}
 body:
   mimeType: application/json
   text: |-
     {
-      "username": "username",
-      "email": "example@example.com",
-      "password": "test123456"
+      "id": 0,
+      "longName": "string",
+      "shortName": "string",
+      "damageType": "string",
+      "features": "string",
+      "BaseTier": "string",
+      "BaseStats": {
+        "HP": 0,
+        "ATK": 0,
+        "CRT": 0,
+        "SP": 0,
+        "DEF": 0
+      }
     }
-created: 1593662743945
+created: 1593713423085
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593662743945
+metaSortKey: -1593713423085
 method: POST
-modified: 1593662743945
+modified: 1593713423085
 name: Adds a new valkyrie
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
@@ -27,4 +37,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/valkyries"
+url: "{{ base_url }}/valkyries/"

@@ -1,22 +1,20 @@
-_id: req_wrk_21d2d1e15002451db816890ccc89790c2dcfea75
+_id: req_wrk_21d2d1e15002451db816890ccc89790ce5c9c178
 authentication: {}
 body:
   mimeType: application/json
   text: |-
     {
-      "username": "username",
-      "email": "example@example.com",
-      "password": "test123456"
+      "pid": 21
     }
-created: 1593662743965
+created: 1593713423083
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1593662743965
+metaSortKey: -1593713423083
 method: GET
-modified: 1593662743965
+modified: 1593713423083
 name: Returns a specific valkyrie information
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4
@@ -27,4 +25,4 @@ settingRebuildPath: true
 settingSendCookies: true
 settingStoreCookies: true
 type: Request
-url: "{{ base_url }}/valkyries/{{ valkId }}"
+url: "{{ base_url }}/valkyries/{{ valkId }}/"
