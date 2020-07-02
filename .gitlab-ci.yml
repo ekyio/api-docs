@@ -6,7 +6,6 @@ pages:
     - insomnia-documenter --config specs.json 
     - mkdir .result
     - cp -r * .result
-    - mkdir public
     - mv .result public
   artifacts:
     paths:
