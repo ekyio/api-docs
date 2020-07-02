@@ -2,16 +2,8 @@ pages:
   image: node:14
   stage: deploy
   script:
-    - npm install -q -g redoc-cli
-    - wget https://github.com/Fyb3roptik/swaggomnia/releases/download/2.0.1/swaggomnia_linux_amd64.tar.gz
-    - tar -xzf swaggomnia_linux_amd64.tar.gz
-    - mv swaggomnia_linux_amd64/swaggomnia swaggomania
-    - chmod +x swaggomania
-    - ./swaggomania generate --insomnia docs/ekyio.json -config docs/config.json
-    - redoc-cli bundle -o index.html swagger.yaml
-    - mkdir .public 
-    - cp -r * .public
-    - mv .public public
+    - npm i -g insomnia-documenter
+    - insomnia-documenter --config spec.json --output public/
   artifacts:
     paths:
       - public
