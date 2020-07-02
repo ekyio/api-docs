@@ -4,7 +4,7 @@ pages:
   script:
     - npm i -g insomnia-documenter
     - mkdir public
-    - insomnia-documenter --config specs.json --output public/
+    - insomnia-documenter --config specs.json --output public
   artifacts:
     paths:
       - public
