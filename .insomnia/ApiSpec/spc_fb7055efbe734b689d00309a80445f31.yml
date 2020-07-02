@@ -157,20 +157,13 @@ contents: >-
         summary: Returns a list of valkyries
         tags:
           - valkyries
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
         responses:
           "200":
-            description: User logged-in, returns a JWT key.
+            description: Returns a generic query of all Valkyries.
             content:
               application/json:
                 schema:
-                  $ref: "#/components/schemas/Token"
+                  $ref: "#/components/schemas/Valkyries"
       post:
         summary: Adds a new valkyrie
         tags:
@@ -179,16 +172,16 @@ contents: >-
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
+                $ref: "#/components/schemas/Valkyrie"
+          description: The id is attributed once the request is completed.
           required: true
         responses:
           "200":
-            description: User logged-in, returns a JWT key.
+            description: Returns Valkyrie data plus its id
             content:
               application/json:
                 schema:
-                  $ref: "#/components/schemas/Token"
+                  $ref: "#/components/schemas/Valkyrie"
     /valkyries/{valkId}/:
       get:
         summary: Returns a specific valkyrie information
@@ -198,16 +191,16 @@ contents: >-
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
+                $ref: "#/components/schemas/valkId"
+          description: pid value in JSON associated with the Valkyrie
           required: true
         responses:
           "200":
-            description: User logged-in, returns a JWT key.
+            description: Returns a JSON with Valkyrie data.
             content:
               application/json:
                 schema:
-                  $ref: "#/components/schemas/Token"
+                  $ref: "#/components/schemas/Valkyrie"
       put:
         summary: Updates a Valkyrie basic information
         tags:
@@ -234,7 +227,7 @@ contents: >-
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/User"
+                $ref: "#/components/schemas/valkId"
           description: Username and password
           required: true
         responses:
@@ -925,6 +918,15 @@ contents: >-
           DEF:
             type: integer
             format: int64
+      Valkyries:
+        type: object
+        required: 
+          - Valkyrie
+        properties:
+          Valkyrie:
+            $ref: "#/components/schemas/Valkyrie"
+          Valkyrie2:
+            $ref: "#/components/schemas/Valkyrie"
       Valkyrie:
         type: object
         required:
@@ -952,6 +954,6 @@ contents: >-
             $ref: "#/components/schemas/BaseStats"
 created: 1592350082772
 fileName: Ekyio's API 0.0.1
-modified: 1593710546692
+modified: 1593711568645
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec
