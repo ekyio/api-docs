@@ -8,15 +8,15 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1592533788325
+created: 1593662743956
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592533788325
+metaSortKey: -1593662743956
 method: GET
-modified: 1593652430244
+modified: 1593662743956
 name: Returns a list of valkyries
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790cfa71e8a4

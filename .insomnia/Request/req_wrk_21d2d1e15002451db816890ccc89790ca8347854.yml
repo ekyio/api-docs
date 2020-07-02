@@ -8,15 +8,15 @@ body:
       "email": "example@example.com",
       "password": "test123456"
     }
-created: 1592533788404
+created: 1593662744011
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592533788404
+metaSortKey: -1593662744011
 method: DELETE
-modified: 1593652430305
+modified: 1593662744011
 name: Removes a weapon from the database
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c5f014482

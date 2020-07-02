@@ -6,15 +6,15 @@ body:
     {
       "email": "example@example.com"
     }
-created: 1592360762394
+created: 1593662744117
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592360762394
+metaSortKey: -1593662744117
 method: POST
-modified: 1592501822623
+modified: 1593662744117
 name: Sends an email to reset users password
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f

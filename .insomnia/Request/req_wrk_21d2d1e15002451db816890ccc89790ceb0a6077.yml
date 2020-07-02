@@ -9,15 +9,15 @@ body:
       "password2": "typeanotherpassword",
       "email": "anotheremail@example.com"
     }
-created: 1592533788163
+created: 1593662744083
 description: ""
 headers:
   - name: Content-Type
     value: application/json
 isPrivate: false
-metaSortKey: -1592533788163
+metaSortKey: -1593662744083
 method: POST
-modified: 1593652430078
+modified: 1593662744083
 name: Registers a new user into the database
 parameters: []
 parentId: fld_wrk_21d2d1e15002451db816890ccc89790c12dea96f

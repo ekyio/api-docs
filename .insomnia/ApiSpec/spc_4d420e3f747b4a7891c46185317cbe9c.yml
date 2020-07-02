@@ -5,12 +5,12 @@ contents: >-
 
   info:
     description: "A backend documentation file for Ekyio's Backend API."
-    version: 0.0.1
+    version: 0.1.3
     title: Ekyio's API
     contact:
       email: rpg.gruber@gmail.com
   tags:
-    - name: user
+    - name: user  
       description: User Auth-Related Endpoints
       security:
         - bearerAuth: []   
@@ -23,6 +23,128 @@ contents: >-
     - name: builds
       description: Endpoint for manipulating builds
   paths:
+    /rest-auth/login/:
+      post:
+        summary: Logs-in user
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+          description: Username and password
+          required: true
+        responses:
+          "200":
+            description: User logged-in, returns a JWT key.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /rest-auth/logout/:
+      post:
+        summary: Logs-out user
+        tags:
+          - user
+        description: Logs-out user.
+        responses:
+          "200":
+            description: Successfuly logged out.
+    /rest-auth/password/reset/:
+      post:
+        summary: Sends an email to reset users password
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Email"
+          description: Send a recovery email so the user can reset his password.
+          required: true
+        responses:
+          "200":
+            description: The reset email has been sent.
+    /rest-auth/password/reset/confirm/:
+      post:
+        summary: Confirms the token received by user to validate email
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PasswordReset"
+          description: Use the token provided by the reset email to generate a new password.
+          required: true
+        responses:
+          "200":
+            description: Your password has been sucessfully updated.
+    /rest-auth/password/change/:
+      post:
+        summary: Changes user password using his old credentials
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PasswordChange"
+          description: Change the user password within the API.
+          required: true
+        responses:
+          "200":
+            description: Your password has been sucessfully updated.
+    /rest-auth/registration:
+      post:
+        summary: Registers a new user into the database
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Registration"
+          description: User-Auth Registration endpoint.
+          required: true
+        responses:
+          "201":
+            description: Created. Returns the key/JWT value associated with your user.
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/Token"
+    /rest-auth/registration/verify-email:
+      post:
+        summary: Verifies email provided in the registration process
+        tags:
+          - user
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Token"
+          description: Verify user account using token sent to his email address.
+          required: true
+        responses:
+          "200":
+            description: OK.
+    /rest-auth/user:
+      get: 
+        summary: Providers logged-in user data upon request
+        tags:
+          - user
+        description: User-Auth Registration endpoint.
+        required: true
+        responses:
+          "200":
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/UserDetails"
+          '401':
+            $ref: '#/components/responses/UnauthorizedError'
     /weapons:
       get:
         summary: Returns a list of weapons
@@ -329,128 +451,6 @@ contents: >-
               application/json:
                 schema:
                   $ref: "#/components/schemas/Token"
-    /rest-auth/login/:
-      post:
-        summary: Logs-in user
-        tags:
-          - user
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/User"
-          description: Username and password
-          required: true
-        responses:
-          "200":
-            description: User logged-in, returns a JWT key.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
-    /rest-auth/logout:
-      post:
-        summary: Logs-out user
-        tags:
-          - user
-        description: Logs-out user.
-        responses:
-          "200":
-            description: Successfuly logged out.
-    /rest-auth/password/reset:
-      post:
-        summary: Sends an email to reset users password
-        tags:
-          - user
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Email"
-          description: Send a recovery email so the user can reset his password.
-          required: true
-        responses:
-          "200":
-            description: The reset email has been sent.
-    /rest-auth/password/reset/confirm:
-      post:
-        summary: Confirms the token received by user to validate email
-        tags:
-          - user
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PasswordReset"
-          description: Use the token provided by the reset email to generate a new password.
-          required: true
-        responses:
-          "200":
-            description: Your password has been sucessfully updated.
-    /rest-auth/password/change:
-      post:
-        summary: Changes user password using his old credentials
-        tags:
-          - user
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/PasswordChange"
-          description: Change the user password within the API.
-          required: true
-        responses:
-          "200":
-            description: Your password has been sucessfully updated.
-    /rest-auth/registration:
-      post:
-        summary: Registers a new user into the database
-        tags:
-          - user
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Registration"
-          description: User-Auth Registration endpoint.
-          required: true
-        responses:
-          "201":
-            description: Created. Returns the key/JWT value associated with your user.
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/Token"
-    /rest-auth/registration/verify-email:
-      post:
-        summary: Verifies email provided in the registration process
-        tags:
-          - user
-        requestBody:
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Token"
-          description: Verify user account using token sent to his email address.
-          required: true
-        responses:
-          "200":
-            description: OK.
-    /rest-auth/user:
-      get: 
-        summary: Providers logged-in user data upon request
-        tags:
-          - user
-        description: User-Auth Registration endpoint.
-        required: true
-        responses:
-          "200":
-            content:
-              application/json:
-                schema:
-                  $ref: "#/components/schemas/UserDetails"
-          '401':
-            $ref: '#/components/responses/UnauthorizedError'
     /stigmatas:
       get:
         summary: Returns a list of stigmatas
@@ -945,6 +945,6 @@ contents: >-
             $ref: "#/components/schemas/BaseStats"
 created: 1593637562004
 fileName: Ekyio's API 0.0.1
-modified: 1593652457213
+modified: 1593661254872
 parentId: wrk_21d2d1e15002451db816890ccc89790c
 type: ApiSpec

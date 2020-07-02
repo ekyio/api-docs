@@ -4,12 +4,17 @@ created: 1592350184555
 data:
   base_path: /api
   bearerToken: bearerToken
-  host: ekyio
+  host: ekyio.com
   scheme: https
-dataPropertyOrder: null
+dataPropertyOrder:
+  "&":
+    - base_path
+    - bearerToken
+    - host
+    - scheme
 isPrivate: false
 metaSortKey: 1592350184555
-modified: 1593652430417
+modified: 1593662744234
 name: OpenAPI env
 parentId: env_2d2152d5bd47a3afccb7a78afd596dda105b0b19
 type: Environment
